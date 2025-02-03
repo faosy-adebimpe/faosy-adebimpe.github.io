@@ -1,0 +1,13 @@
+:root {
+    --brand-color: #09a519;
+    --main-color: red;
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --white-2: #c6c2c2;
+    --black-2: #373737;
+    --black-3: #4a4949;
+    --black-4: #707070;
+    --gray-1: #959595;
+    --body-bg: #232020;
+    --icon-hover: rgba(255, 255, 255, 0.1);
+}

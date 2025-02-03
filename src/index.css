@@ -1,0 +1,192 @@
+@import 'tailwindcss';
+@import './css/vars.css';
+@import './css/theme.css';
+
+/* theme */
+
+/* base */
+html {
+    @apply bg-(--body-bg) scroll-smooth;
+}
+
+/* component */
+
+.container {
+    margin-inline: auto;
+    padding-inline: 2rem;
+    /* background-color: red; */
+}
+
+.toggle-button {
+    &.active {
+        /* background-color: var(--brand-color);
+            translate: 13px;
+            scale: 1.3; */
+        @apply translate-x-[13px] scale-[1.3] bg-(--brand-color);
+    }
+}
+.title {
+    @apply text-[18px] text-(--white-2) mb-[50px];
+}
+
+.hero-link-icon {
+    /* font-size: 17px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease; */
+
+    @apply text-[17px] w-[30px] h-[30px] rounded-full flex justify-center items-center transition-all duration-300;
+
+    &:hover {
+        /* background-color: rgba(255, 255, 255, 0.1); */
+        @apply bg-(--icon-hover);
+    }
+}
+
+.project-icon {
+    @apply text-[12px] cursor-pointer transition-all duration-200;
+
+    &:hover {
+        @apply opacity-[0.85];
+    }
+}
+
+.form-input {
+    @apply text-(--black-3) text-[14px] flex gap-[7px] flex-col-reverse lg:text-[16px];
+
+    & * {
+        @apply transition-all duration-100;
+    }
+
+    input,
+    textarea {
+        @apply outline-none border-b-[1px] border-(--black-3);
+
+        &:focus {
+            @apply border-(--gray-1) text-(--gray-1);
+
+            @apply border-(--gray-1) text-(--gray-1);
+
+            & ~ label {
+                @apply text-(--gray-1);
+            }
+        }
+    }
+}
+
+.sitemap {
+    ul li a {
+        line-height: 27px;
+
+        @apply text-(--black-3) text-[14px] transition-all duration-100;
+
+        &:hover {
+            @apply text-(--black-4);
+        }
+    }
+}
+
+.social-icon {
+    @apply text-(--black-3) text-[14px] flex gap-[20px] items-center transition-all duration-100;
+
+    &:hover {
+        @apply text-(--black-4);
+    }
+
+    div {
+        @apply text-[19.04px];
+    }
+}
+
+.nav-link {
+    @apply text-(--black-4) text-[14px] flex gap-2 justify-center items-center;
+
+    span:last-child {
+        @apply flex justify-center items-center text-[16px];
+    }
+    &.active {
+        @apply text-(--white-2);
+    }
+    &:hover {
+        @apply text-(--white-2);
+    }
+}
+
+.nav-menu {
+    @apply p-2;
+    ul {
+        @apply flex flex-col gap-[26px];
+        li {
+            a {
+                @apply text-[20px] w-8 h-8 rounded-full flex justify-center items-center transition-all hover:bg-black/30;
+            }
+        }
+    }
+}
+
+/* custom utilities  */
+
+.center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center-x {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.center-y {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.smooth-hover {
+    transition: all 100ms ease;
+}
+
+.hover-effect {
+    transition: all 100ms ease;
+    &:hover {
+        opacity: 0.85;
+    }
+    &:active {
+        scale: 0.9;
+    }
+}
+
+/* utilities */
+
+/* @utility container {
+    margin-inline: auto;
+    padding-inline: 2rem;
+} */
+
+/* testing */
+
+.sections {
+    @apply overflow-hidden relative;
+    section.sec {
+        @apply w-full h-screen flex justify-center items-center absolute top-0 left-0;
+
+        h2 {
+            @apply text-xl font-semibold text-white capitalize;
+        }
+    }
+}
+
+@keyframes roll {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
