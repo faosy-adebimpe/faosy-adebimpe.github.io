@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
                             <a
                                 href='#contact'
                                 className='w-[135px] h-[40px] bg-(--brand-color) rounded-[10px] text-(--secondary-color) cursor-pointer transition hover:opacity-85 active:scale-90 sm:text-[12px] md:text-[14px]
-                        md:w-[147px] flex gap-3 justify-center items-center animate-bounces hover:animate-none
+                        md:w-[147px] flex gap-3 justify-center items-center animate-bounce hover:animate-none
                         '
                             >
                                 <span className=''>
