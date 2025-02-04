@@ -1,20 +1,23 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import Bars from '../components/tests/Bars';
+
 import Navbar from '../components/navbar/Navbar';
 import Hero from '../components/hero/Hero';
 import Main from '../components/main/Main';
 import Footer from '../components/footer/Footer';
+
 gsap.registerPlugin(ScrollTrigger);
 const Home: React.FC = () => {
-    const [width, setWidth] = useState<number>(window.innerWidth);
-    useEffect(() => {
-        window.addEventListener('resize', () => setWidth(window.innerWidth));
-    }, []);
+    // const [width, setWidth] = useState<number>(window.innerWidth);
+    // useEffect(() => {
+    //     window.addEventListener('resize', () => setWidth(window.innerWidth));
+    // }, []);
 
-    useEffect(() => {
-        console.log(width);
-    }, [width]);
+    // useEffect(() => {
+    //     console.log(width);
+    // }, [width]);
 
     useEffect(() => {
         const elements: HTMLElement[] = gsap.utils.toArray(
@@ -39,6 +42,7 @@ const Home: React.FC = () => {
     }, []);
     return (
         <div>
+            {/* <Bars /> */}
             <Navbar />
             <Hero />
             <Main />

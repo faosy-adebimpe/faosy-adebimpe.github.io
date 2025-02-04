@@ -196,3 +196,19 @@
         transform: rotate(360deg);
     }
 }
+
+.box {
+    @apply w-[50px] h-[50px] border-[10px] border-gray-700;
+
+    &.normal {
+        @apply bg-gray-700;
+    }
+
+    &.alert {
+        @apply bg-red-700;
+    }
+
+    &.success {
+        @apply bg-green-700;
+    }
+}

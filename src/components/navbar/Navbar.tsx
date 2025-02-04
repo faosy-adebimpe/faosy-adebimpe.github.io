@@ -13,7 +13,6 @@ const Navbar: React.FC = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            console.log(window.scrollY);
             if (window.scrollY > 70) {
                 setFixed(true);
             } else {
@@ -24,11 +23,11 @@ const Navbar: React.FC = () => {
 
     return (
         <>
-            <div className='bg-(--primary-color) h-[70px]'></div>
+            <div className='bg-(--primary-color) h-[60px] md:h-[70px]'></div>
             {/* <div className='w-full bg-white opacity-50 fixed z-40 backdrop-blur-md h-[70px] top-0 left-0'></div> */}
             <nav
                 className={
-                    `bg-(--primary-color) h-[70px] fixed top-0 left-0 w-full z-30 transition ` +
+                    `bg-(--primary-color) h-[60px] md:h-[70px] fixed top-0 left-0 w-full z-30 transition ` +
                     (fixed
                         ? 'bg-(--primary-color)/70 hover:bg-(--primary-color) backdrop-blur-sm'
                         : '')
@@ -36,12 +35,12 @@ const Navbar: React.FC = () => {
                 id='nav'
             >
                 <div className='mx-auto w-[90%] px-[2rem] h-full flex items-center justify-between'>
-                    <div className='text-[40px]'>
+                    <div className='text-[30px] md:text-[40px]'>
                         <LogoIcon />
                     </div>
                     <NavLinks />
                     <button
-                        className='text-white w-10 h-10 rounded-full transition-all hover:bg-gray-500/30 flex justify-center items-center cursor-pointer text-[1.5em] active:scale-95 lg:hidden'
+                        className='text-white w-10 h-10 rounded-full transition-all hover:bg-gray-500/30 flex justify-center items-center cursor-pointer text-[1.3em] md:text-[1.5em] active:scale-95 lg:hidden'
                         onClick={setOpen}
                     >
                         {open ? (

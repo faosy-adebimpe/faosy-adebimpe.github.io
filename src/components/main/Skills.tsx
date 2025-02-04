@@ -17,19 +17,19 @@ const Skills: React.FC = () => {
                 <h2 className='title'>SKILLS</h2>
                 <div
                     className={
-                        'skills w-full flex flex-col gap-[10px] overflow-hidden duration-300 transition-all ' +
+                        'skills-wrapper w-full flex flex-col gap-[10px] overflow-hidden duration-300 transition-all ' +
                         (extend
                             ? 'max-h-screen'
                             : ' max-h-[100px] md:max-h-[150px]')
                     }
                 >
-                    <Skill name={'HTML'} proficiency={80} />
-                    <Skill name={'CSS'} proficiency={95} />
-                    <Skill name={'JAVASCRIPT'} proficiency={75} />
-                    <Skill name={'REACT'} proficiency={75} />
-                    <Skill name={'TYPESCRIPT'} proficiency={75} />
-                    <Skill name={'SCSS'} proficiency={75} />
-                    <Skill name={'TAILWIND'} proficiency={75} />
+                    <Skill name={'HTML'} proficiency={95} />
+                    <Skill name={'CSS'} proficiency={93} />
+                    <Skill name={'JAVASCRIPT'} proficiency={90} />
+                    <Skill name={'REACT'} proficiency={85} />
+                    <Skill name={'TYPESCRIPT'} proficiency={80} />
+                    <Skill name={'SCSS'} proficiency={90} />
+                    <Skill name={'TAILWIND'} proficiency={80} />
                 </div>
 
                 <div className='more-skills mt-[30px]'>
