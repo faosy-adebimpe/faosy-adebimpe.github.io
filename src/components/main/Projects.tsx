@@ -26,8 +26,8 @@ const Projects: React.FC = () => {
                         y: 0,
                         scrollTrigger: {
                             trigger: element,
-                            start: 'top 30%',
-                            end: 'bottom 40%',
+                            start: 'top 80%',
+                            end: 'bottom 50%',
                             scrub: 1,
                         },
                     }
