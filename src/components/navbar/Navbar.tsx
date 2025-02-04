@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
                 className={
                     `bg-(--primary-color) h-[70px]  fixed top-0 left-0 w-full z-20 transition ` +
                     (fixed
-                        ? 'opacity-70 backdrop-blur-md hover:opacity-100'
+                        ? 'opacity-70 hover:opacity-100 scale-50 grayscale backdrop-blur-sm'
                         : '')
                 }
                 id='nav'
