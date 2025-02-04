@@ -10,5 +10,10 @@ export default defineConfig({
             '@': '/src',
         },
     },
+    build: {
+        rollupOptions: {
+            external: ['@fontsource/inter/variable.css'],
+        },
+    },
     base: '/',
 });
