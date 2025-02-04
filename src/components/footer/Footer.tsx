@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
                                     <EnvelopeIcon />
                                 </div>
                                 <p className='text-[14px]'>
-                                    adebimpeadetomiwa3@gmail.com
+                                    faosyadebimpe@gmail.com
                                 </p>
 
                                 {copy.email ? (
@@ -169,7 +169,7 @@ const Footer: React.FC = () => {
                                     <EnvelopeIcon />
                                 </div>
                                 <p className='text-[14px]'>
-                                    adebimpeadetomiwa3@gmail.com
+                                    faosyadebimpe@gmail.com
                                 </p>
 
                                 {copy.email ? (
@@ -244,7 +244,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div className='copyright text-(--black-4) mt-[200px] pb-[15px] sm:w-full text-center md:col-span-2 md:pb-[25px]'>
                     <p className='text-[10px] md:text-[12px]'>
-                        Copyright 2025 Adebimpe Adetomiwa
+                        Copyright 2025 Faosy Adebimpe
                     </p>
                 </div>
 
