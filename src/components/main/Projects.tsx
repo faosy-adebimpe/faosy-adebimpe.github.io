@@ -13,29 +13,28 @@ const Projects: React.FC = () => {
         ) as HTMLElement[];
 
         if (window.innerWidth <= 769) {
-            elements.forEach((element, index) => {
+            elements.forEach((element) => {
                 gsap.fromTo(
                     element,
                     {
                         opacity: 0,
-                        y: 100,
+                        y: 50,
                     },
                     {
                         opacity: 1,
-                        duration: 2,
+                        duration: 1,
                         y: 0,
-                        delay: index + 1,
                         scrollTrigger: {
                             trigger: element,
-                            start: 'top 40%',
-                            end: 'bottom top',
+                            start: 'top 30%',
+                            end: 'bottom 40%',
                             scrub: 1,
                         },
                     }
                 );
             });
         } else {
-            elements.forEach((element, index) => {
+            elements.forEach((element) => {
                 gsap.fromTo(
                     element,
                     {
@@ -46,11 +45,11 @@ const Projects: React.FC = () => {
                         opacity: 1,
                         duration: 2,
                         x: 0,
-                        delay: index + 1,
+                        // delay: index + 1,
                         scrollTrigger: {
                             trigger: element,
                             start: 'top 80%',
-                            end: 'bottom top',
+                            end: 'bottom 50%',
                             scrub: 1,
                         },
                     }
@@ -58,6 +57,7 @@ const Projects: React.FC = () => {
             });
         }
 
+        // title
         gsap.fromTo(
             '.projects-title',
             {
