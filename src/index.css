@@ -27,7 +27,7 @@
     }
 }
 .title {
-    @apply text-[18px] text-(--white-2) mb-[50px];
+    @apply text-[18px] text-(--white-2) mb-[50px] font-semibold;
 }
 
 .hero-link-icon {
