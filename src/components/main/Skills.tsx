@@ -13,7 +13,7 @@ const Skills: React.FC = () => {
             className='section skills sm:w-[370px] w-[302px] md:w-[605px] lg:w-[650px] xl:w-[700px]'
             id='skills'
         >
-            <div className='container flex flex-col items-center'>
+            <div className='md:container flex flex-col items-center'>
                 <h2 className='title'>SKILLS</h2>
                 <div
                     className={

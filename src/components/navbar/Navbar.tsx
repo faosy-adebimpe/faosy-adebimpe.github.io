@@ -25,11 +25,12 @@ const Navbar: React.FC = () => {
     return (
         <>
             <div className='bg-(--primary-color) h-[70px]'></div>
+            {/* <div className='w-full bg-white opacity-50 fixed z-40 backdrop-blur-md h-[70px] top-0 left-0'></div> */}
             <nav
                 className={
-                    `bg-(--primary-color) h-[70px]  fixed top-0 left-0 w-full z-20 transition ` +
+                    `bg-(--primary-color) h-[70px] fixed top-0 left-0 w-full z-30 transition ` +
                     (fixed
-                        ? 'opacity-70 hover:opacity-100 backdrop-blur-sm'
+                        ? 'bg-(--primary-color)/70 hover:bg-(--primary-color) backdrop-blur-sm'
                         : '')
                 }
                 id='nav'

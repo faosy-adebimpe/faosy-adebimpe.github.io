@@ -163,6 +163,11 @@
     }
 }
 
+.nav-blur {
+    backdrop-filter: blur(20px);
+    /* background-color: red; */
+}
+
 /* utilities */
 
 /* @utility container {
