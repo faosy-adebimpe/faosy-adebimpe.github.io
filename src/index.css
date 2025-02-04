@@ -7,7 +7,7 @@
 /* base */
 @layer base {
     html {
-        @apply bg-(--body-bg) scroll-smooth font-jost;
+        @apply bg-(--body-bg) scroll-smooth font-inter;
     }
 }
 /* component */
