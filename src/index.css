@@ -5,10 +5,11 @@
 /* theme */
 
 /* base */
-html {
-    @apply bg-(--body-bg) scroll-smooth;
+@layer base {
+    html {
+        @apply bg-(--body-bg) scroll-smooth font-inter;
+    }
 }
-
 /* component */
 
 .container {
