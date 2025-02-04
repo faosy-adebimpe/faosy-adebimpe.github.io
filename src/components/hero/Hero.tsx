@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
         <div className='hero md:mt-[92px] md:mb-[200px] lg:mt-[70px]' id='hero'>
             <div className='container text-[12px] flex flex-col justify-center items-center h-[calc(100vh-70px)] md:h-auto lg:flex-row lg:gap-[123px] xl:items-center'>
                 <div className='flex flex-col justify-center items-center'>
-                    <h2 className='name text-[24px] font-bold text-(--white-2) sm:text-[28px] md:text-[30px] font-jost '>
+                    <h2 className='name text-[24px] font-bold text-(--white-2) sm:text-[28px] md:text-[30px] '>
                         FAOSY ADEBIMPE
                     </h2>
                     <div className='role mt-[35px] flex flex-col items-center text-(--gray-1)'>
