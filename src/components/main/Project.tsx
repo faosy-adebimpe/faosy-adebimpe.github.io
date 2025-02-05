@@ -1,9 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { ProjectType } from '../../types';
 import ArrowUpRightFromSquareIcon from '../icons/ArrowUpRightFromSquareIcon';
 import SquareGitHubIcon from '../icons/SquareGitHubIcon';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import classNames from 'classnames';
 gsap.registerPlugin(ScrollTrigger);
 
 const Project: React.FC<ProjectType> = ({
@@ -15,16 +16,17 @@ const Project: React.FC<ProjectType> = ({
     // const [width, setWidth] = useState<number>(window.innerWidth);
 
     // window.addEventListener('resize', () => setWidth(window.innerWidth));
+    const project = useRef(null);
     useEffect(() => {
         gsap.fromTo(
-            '.view-project',
+            project.current,
             { opacity: 0, y: 100 },
             {
                 opacity: 1,
                 y: 0,
                 duration: 1,
                 scrollTrigger: {
-                    trigger: '.view-project',
+                    trigger: project.current,
                     start: 'top 80%',
                     end: 'top 30%',
                     scrub: true,
@@ -33,7 +35,13 @@ const Project: React.FC<ProjectType> = ({
         );
     }, []);
     return (
-        <div className='view-project project gsap-project transition-all duration-200 hover:scale-110 bg-(--primary-color)/10 rounded-md p-2 opacity-70 hover:opacity-100'>
+        <div
+            className={classNames(
+                'project gsap-project transition-all duration-200 hover:scale-110 bg-(--primary-color)/10 rounded-md p-2 opacity-70 hover:opacity-100'
+                // `view-project-${title}`
+            )}
+            ref={project}
+        >
             <div className='project-image'>
                 <div className='w-[173px] h-[159px] bg-(--black-2) sm:w-[230px] sm:h-[200px] md:w-[233px] md:h-[214px] rounded-md overflow-hidden'>
                     <img
