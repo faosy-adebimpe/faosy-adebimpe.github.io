@@ -9,7 +9,6 @@ import WhatsappIcon from '../icons/WhatsappIcon';
 import InstagramIcon from '../icons/InstagramIcon';
 import XIcon from '../icons/XIcon';
 import GitHubIcon from '../icons/GitHubIcon';
-
 import PortfolioFile from '../../assets/data/Faosy Adebimpe.pdf';
 
 const Footer: React.FC = () => {

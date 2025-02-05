@@ -188,27 +188,21 @@
     }
 }
 
-@keyframes roll {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.box {
-    @apply w-[50px] h-[50px] border-[10px] border-gray-700;
-
-    &.normal {
-        @apply bg-gray-700;
+.test-section {
+    &.blue {
+        @apply bg-blue-500;
     }
 
-    &.alert {
-        @apply bg-red-700;
+    &.red {
+        @apply bg-red-500;
     }
-
-    &.success {
-        @apply bg-green-700;
+    &.green {
+        @apply bg-green-500;
+    }
+    &.orange {
+        @apply bg-orange-500;
+    }
+    &.pink {
+        @apply bg-pink-500;
     }
 }

@@ -23,7 +23,8 @@ const About: React.FC = () => {
                 scrollTrigger: {
                     trigger: element,
                     start: 'top, 80%',
-                    end: 'top 30%',
+                    // end: 'top 30%',
+                    end: 'top 50%',
                     scrub: 1,
                 },
             }

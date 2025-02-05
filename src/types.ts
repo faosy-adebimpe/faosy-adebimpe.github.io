@@ -25,6 +25,7 @@ export interface ProjectType {
     image: string;
     githubLink: string;
     websiteLink: string;
+    delay: number;
 }
 
 export interface SkillType {

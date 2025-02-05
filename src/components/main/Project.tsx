@@ -1,6 +1,10 @@
+import { useEffect } from 'react';
 import { ProjectType } from '../../types';
 import ArrowUpRightFromSquareIcon from '../icons/ArrowUpRightFromSquareIcon';
 import SquareGitHubIcon from '../icons/SquareGitHubIcon';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 const Project: React.FC<ProjectType> = ({
     title,
@@ -8,8 +12,28 @@ const Project: React.FC<ProjectType> = ({
     githubLink,
     websiteLink,
 }) => {
+    // const [width, setWidth] = useState<number>(window.innerWidth);
+
+    // window.addEventListener('resize', () => setWidth(window.innerWidth));
+    useEffect(() => {
+        gsap.fromTo(
+            '.view-project',
+            { opacity: 0, y: 100 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: '.view-project',
+                    start: 'top 80%',
+                    end: 'top 30%',
+                    scrub: true,
+                },
+            }
+        );
+    }, []);
     return (
-        <div className='project gsap-project transition-all duration-200 hover:scale-110 bg-(--primary-color)/10 rounded-md p-2 opacity-70 hover:opacity-100'>
+        <div className='view-project project gsap-project transition-all duration-200 hover:scale-110 bg-(--primary-color)/10 rounded-md p-2 opacity-70 hover:opacity-100'>
             <div className='project-image'>
                 <div className='w-[173px] h-[159px] bg-(--black-2) sm:w-[230px] sm:h-[200px] md:w-[233px] md:h-[214px] rounded-md overflow-hidden'>
                     <img
